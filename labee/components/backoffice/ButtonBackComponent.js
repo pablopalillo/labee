@@ -12,12 +12,12 @@ export function ButtonBackComponent() {
     return(
     <View style={styles.buttonContainer}>
       <View>
-        <ThemedText color="white">Recibir el pedido</ThemedText>
+        <ThemedText style={styles.textTitleButton}>Recibir el pedido</ThemedText>
       </View>
 
       <View>
-          <ThemedText color="white">Escanea el QR para realizar</ThemedText>
-          <ThemedText color="white">la recepción del pedido</ThemedText>
+          <ThemedText style={styles.textSubtitleButton}>Escanea el QR para realizar</ThemedText>
+          <ThemedText style={styles.textSubtitleButton}>la recepción del pedido</ThemedText>
       </View>
     </View>)
 }
@@ -29,7 +29,13 @@ const styles = StyleSheet.create({
     borderRadius: '14px',
     padding: 10
   },
-
-
-
+  textTitleButton: {
+    color: "white",
+    fontWeight: "bold",
+  },
+  textSubtitleButton: {
+    color: "white",
+    fontSize: 14,
+    lineHeight: 16,
+  }
 });
