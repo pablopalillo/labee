@@ -24,6 +24,9 @@ export function LoginComponent() {
         <TextInput
         style={styles.input}
         placeholder="Ingresa tu Contraseña"
+        secureTextEntry={true}
+        autoCapitalize="none"
+        spellCheck={false}
         //onChangeText={newText => setText(newText)}
         defaultValue=""
         />
