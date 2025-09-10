@@ -1,6 +1,6 @@
 import { Image } from 'expo-image';
 import React, {useState} from 'react';
-import {Text, TextInput, View, Button, Alert, StyleSheet} from 'react-native';
+import {Text, TextInput, View, Button, Alert, StyleSheet, ScrollView} from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 
 
@@ -10,7 +10,7 @@ export function HeaderBackComponent() {
     };
 
     return(
-    <View>
+    <ScrollView>
         <View style={[
         styles.container,
         {
@@ -26,8 +26,8 @@ export function HeaderBackComponent() {
             </View>
 
             <View style={{flex: 4}}>
-                <ThemedText>UBICACIÓN ACTUAL</ThemedText>
-                <ThemedText>Carrera 7 # 40-40 Pereira</ThemedText>
+                <Text>UBICACIÓN ACTUAL</Text>
+                <Text>Carrera 7 # 40-40 Pereira</Text>
             </View>
             <View style={{flex:1, alignItems:'flex-end'}}>
                 <Image
@@ -41,7 +41,7 @@ export function HeaderBackComponent() {
         <View>
             <Text>Hola E.S.P Pereira, ten un buen dia.</Text>
         </View>
-    </View>)
+    </ScrollView>)
 }
 
 const styles = StyleSheet.create({

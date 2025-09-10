@@ -8,7 +8,6 @@ import { ThemedText } from '@/components/ThemedText';
 export function RequestItemComponent(props) {
     const router = useRouter();
     const onPress = (title, status, stripDate) => {
-        Alert.alert('You tapped the button!');
         router.navigate({
           pathname: '/requestSummary',
           params: { title, status, stripDate },

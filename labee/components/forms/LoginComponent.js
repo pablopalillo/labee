@@ -5,14 +5,12 @@ import { useRouter } from 'expo-router';
 export function LoginComponent() {
     const router = useRouter();
     const onPress = () => {
-        Alert.alert('You tapped the button!');
         router.navigate('/backoffice');
     };
 
     return(
     <View style={styles.formContainer}>
-        <form style={styles.formContainer}>
-        <View>
+        <View style={styles.formControl}>
         <TextInput 
         style={styles.input}
         placeholder="Ingresa tu Email"
@@ -20,7 +18,7 @@ export function LoginComponent() {
         defaultValue=""
         />
         </View>
-        <View>
+        <View style={styles.formControl}>
         <TextInput
         style={styles.input}
         placeholder="Ingresa tu Contraseña"
@@ -31,22 +29,24 @@ export function LoginComponent() {
         defaultValue=""
         />
         </View>
+
         <View style={styles.buttonWrapper}>
           <Button color="#1CC09A" onPress={onPress} placeholderTextColor="#FFFFFF" title="INGRESAR" />
         </View>
-       
-
-        </form>
-
     </View>)
 }
 
 const styles = StyleSheet.create({
   formContainer: {
     width: '100%',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     gap: 8,
+  },
+
+  formControl: {
+    width: '100%',
+    flex:1,
   },
 
   input: {

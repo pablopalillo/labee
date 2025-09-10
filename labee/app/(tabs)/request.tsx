@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Text, ScrollView} from 'react-native';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -33,33 +33,33 @@ export default function RequestScreen() {
 
   return (
      <ThemedView style={styles.container}>
-        <ThemedView style={styles.content}>
+        <ScrollView style={styles.content}>
             <View>
-                <ThemedText style={styles.textTitleButton}>Solicitudes</ThemedText>
+                <Text style={styles.textTitleButton}>Solicitudes</Text>
             </View>
 
             <View>
-                <ThemedText style={styles.textSubtitleButton}>Hoy</ThemedText>
+                <Text style={styles.textSubtitleButton}>Hoy</Text>
             </View>
-            <View>
+            <ScrollView>
                 <RequestItemComponent title="#00004" date={getCurrentDate()} stripDate="9:00 am - 01:00 am " status="En proceso" />
-            </View>
-            <View>
-                <ThemedText style={styles.textSubtitleButton}>Lunes, 13 de mayo</ThemedText>
-            </View>
-            <View>
+            </ScrollView>
+            <ScrollView>
+                <Text style={styles.textSubtitleButton}>Lunes, 13 de mayo</Text>
+            </ScrollView>
+            <ScrollView>
                 <RequestItemComponent title="#00003" date="13 de mayo de 2025" stripDate="06:00 am - 07:00 am" status="Cancelado" />
-            </View>
-            <View>
+            </ScrollView>
+            <ScrollView>
                 <RequestItemComponent title="#00004" date="13 de mayo de 2025" stripDate="05:00 pm -07:00 pm" status="Entregados" />
-            </View>
-            <View>
-                <ThemedText style={styles.textSubtitleButton}>Lunes, 2 de marzo</ThemedText>
-            </View>
-            <View>
+            </ScrollView>
+            <ScrollView>
+                <Text style={styles.textSubtitleButton}>Lunes, 2 de marzo</Text>
+            </ScrollView>
+            <ScrollView>
                 <RequestItemComponent title="#00004" date="02 de marzo de 2025" stripDate="9:00 am - 01:00 am" status="Cancelado" />
-            </View>
-        </ThemedView>
+            </ScrollView>
+        </ScrollView>
      </ThemedView>
   );
 }

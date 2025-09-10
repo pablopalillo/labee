@@ -11,7 +11,6 @@ export default function RequestSummaryScreen() {
 
   const params = useLocalSearchParams();
   const { title, status, stripDate } = params;
-  console.log(params)
 
   return (
      <ThemedView style={styles.container}>

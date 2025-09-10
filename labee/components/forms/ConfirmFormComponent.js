@@ -1,19 +1,17 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View, Button, Alert, StyleSheet} from 'react-native';
+import {Text, TextInput, View, Button, Alert, StyleSheet, ScrollView} from 'react-native';
 import { useRouter } from 'expo-router';
 import { ThemedText } from '@/components/ThemedText';
 
 export function ConfirmFormComponent() {
     const router = useRouter();
     const onPress = () => {
-        Alert.alert('You tapped the button!');
         router.navigate('/backoffice');
     };
 
     return(
     <View style={styles.formContainer}>
-        <form style={styles.formContainer}>
-        <View>
+        <View style={styles.formControl}>
         <View>
             <ThemedText style={styles.textTitle}>Información de quien recibe:</ThemedText>
         </View>
@@ -26,14 +24,10 @@ export function ConfirmFormComponent() {
         //onChangeText={newText => setText(newText)}
         defaultValue=""
         />
+   
+        <Button color="#1CC09A" onPress={onPress} placeholderTextColor="#FFFFFF" title="CONFIRMAR PEDIDO" />
+      
         </View>
-
-        <View style={styles.buttonWrapper}>
-          <Button color="#1CC09A" onPress={onPress} placeholderTextColor="#FFFFFF" title="CONFIRMAR PEDIDO" />
-        </View>
-       
-
-        </form>
 
     </View>)
 }
@@ -41,9 +35,14 @@ export function ConfirmFormComponent() {
 const styles = StyleSheet.create({
   formContainer: {
     width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: 'column',
+    alignItems: 'top',
     gap: 8,
+  },
+
+  formControl: {
+    width: '100%',
+    flex:1,
   },
 
   input: {
@@ -58,8 +57,6 @@ const styles = StyleSheet.create({
 
   buttonWrapper: {
     width: '100%',
-    marginTop: 30,
-    
   },
   textTitle: {
     textAlign: "center",

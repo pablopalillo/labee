@@ -30,11 +30,11 @@ export function SummaryListComponent(props) {
             </View>
 
             <View style={{flex: 4}}>
-                <ThemedText style={styles.itemTitle}>{props.title}</ThemedText>
-                <ThemedText style={styles.itemSubtitle}>{props.units}</ThemedText>
+                <Text style={styles.itemTitle}>{props.title}</Text>
+                <Text style={styles.itemSubtitle}>{props.units}</Text>
             </View>
             <View style={{flex:1, alignItems:'flex-end'}}>
-                <ThemedText style={styles.itemSubtitle}>{props.info}</ThemedText>
+                <Text style={styles.itemSubtitle}>{props.info}</Text>
             </View>
         </View>
     </View>)

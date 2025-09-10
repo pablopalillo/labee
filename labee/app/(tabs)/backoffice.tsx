@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View, ScrollView } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -14,8 +14,11 @@ export default function BackOfficeScreen() {
      <ThemedView style={styles.container}>
 
       <ThemedView style={styles.content}>
+        <View>
         <HeaderBackComponent />
         <ButtonBackComponent />
+        </View>
+
         <SectionButtonComponent title="Rastrear pedido" text="sigue el contenido que muestra tu destino" icon="map-search" />
         <View style={[
         styles.container,

@@ -8,7 +8,6 @@ import { useRouter } from 'expo-router';
 export function SectionButtonComponent(props) {
     const router = useRouter();
     const onPress = () => {
-        Alert.alert('You tapped the button!');
         router.navigate('/confirm');
     };
 
